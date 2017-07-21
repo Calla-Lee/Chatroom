@@ -15,14 +15,15 @@ class UserList {
      * a plain object which stores their ID and socket resource.
      */
     add(socket) {
-        let uid = this.list.length + 1;
-
-        this.list[uid] = {
+        let uid  = this.list.length + 1;
+        let user = {
             id: uid,
             resource: socket
         };
 
-        return this.list[uid];
+        this.list.push(user);
+
+        return user;
     }
 }
 
